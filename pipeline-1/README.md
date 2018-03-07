@@ -7,7 +7,6 @@ Demonstrate how to use TensorFlow object detection API with OpenCV
 # Device
 
 1. <a href=https://devblogs.nvidia.com/parallelforall/jetson-tx2-delivers-twice-intelligence-edge/>LINK</a> Jetson TX2
-</br>
 2. <a href=https://developer.nvidia.com/embedded/jetpack>LINK</a> JetPack 3.2
 </br>
 Please flash your device with <a href=https://developer.nvidia.com/embedded/jetpack>JetPack3.2</a> first.
@@ -20,8 +19,8 @@ Please flash your device with <a href=https://developer.nvidia.com/embedded/jetp
 ```C
 ./script/install_opencv3.4.0.sh [/path/to/install/folder]
 ```
-
 </br>
+
 ## TensorFlow 1.6
 
 **Install prebuilt wheel**
@@ -30,6 +29,7 @@ $ ./script/tf1.6_install_wheel.sh [/path/to/wheel/file]
 ```
 </br>
 </br>
+
 **Build from source**
 ```C
 $ ./script/tf1.6_build_from_source.sh [/path/to/install/folder]
@@ -169,20 +169,21 @@ Configuration finished
 ```C
 $ sudo apt-get install git protobuf-compiler python-pil python-lxml python-tk
 ```
-
 </br>
+
 **Object Detection API**
 
 ```C
-git clone https://github.com/tensorflow/models.git
-cd models/research/
-protoc object_detection/protos/*.proto --python_out=.
-export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
+$ git clone https://github.com/tensorflow/models.git
+$ cd models/research/
+$ protoc object_detection/protos/*.proto --python_out=.
+$ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 ```
 </br>
-**Pipeline 1*
+
+**Pipeline 1**
 ```C
-python object_detection-1.py
+$ python object_detection-1.py
 ```
 </br>
 </br>
