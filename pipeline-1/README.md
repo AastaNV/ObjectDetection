@@ -5,11 +5,13 @@ Demonstrate how to use TensorFlow object detection API with OpenCV
 </br>
 
 # Device
-</br>
+
 1. <a href=https://devblogs.nvidia.com/parallelforall/jetson-tx2-delivers-twice-intelligence-edge/>LINK</a> Jetson TX2
+</br>
 2. <a href=https://developer.nvidia.com/embedded/jetpack>LINK</a> JetPack 3.2
 </br>
 Please flash your device with <a href=https://developer.nvidia.com/embedded/jetpack>JetPack3.2</a> first.
+</br>
 </br>
 </br>
 
@@ -18,8 +20,10 @@ Please flash your device with <a href=https://developer.nvidia.com/embedded/jetp
 ```C
 ./script/install_opencv3.4.0.sh [/path/to/install/folder]
 ```
+
 </br>
 ## TensorFlow 1.6
+
 **Install prebuilt wheel**
 ```C
 $ ./script/tf1.6_install_wheel.sh [/path/to/wheel/file]
@@ -158,14 +162,17 @@ Preconfigured Bazel build configs. You can use any of the below by adding "--con
 Configuration finished
 </br>
 </br>
+</br>
 
 # Run
 **Dependency**
 ```C
-sudo apt-get install git protobuf-compiler python-pil python-lxml python-tk
+$ sudo apt-get install git protobuf-compiler python-pil python-lxml python-tk
 ```
+
 </br>
 **Object Detection API**
+
 ```C
 git clone https://github.com/tensorflow/models.git
 cd models/research/
