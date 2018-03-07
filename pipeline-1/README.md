@@ -17,19 +17,19 @@ Please flash your device with <a href=https://developer.nvidia.com/embedded/jetp
 # Environment
 ## Install OpenCV 3.4.0
 ```C
-./script/install_opencv3.4.0.sh [/path/to/install/folder]
+$ ./script/install_opencv3.4.0.sh [/path/to/install/folder]
 ```
 </br>
 
 ## TensorFlow 1.6
 
-**Install prebuilt wheel**
+**Install Prebuilt Wheel**
 ```C
 $ ./script/tf1.6_install_wheel.sh [/path/to/wheel/file]
 ```
 </br>
 
-**Build from source**
+**Build from Source**
 ```C
 $ ./script/tf1.6_build_from_source.sh [/path/to/install/folder]
 ```
@@ -178,7 +178,13 @@ $ protoc object_detection/protos/*.proto --python_out=.
 $ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
 ```
 
-**Test pipeline 1**
+**Download SSD Model**
+```C
+$ wget http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2017_11_17.tar.gz
+$ tar -xvzf ssd_mobilenet_v1_coco_2017_11_17.tar.gz 
+```
+
+**Test Pipeline 1**
 ```C
 $ python object_detection-1.py
 ```
