@@ -1,6 +1,7 @@
-Pipeline 1: OpenCV + TensorFlow
+Install Requirement
 ======================================
-Demonstrate how to use TensorFlow object detection API with OpenCV
+• TensorFlow
+• OpenCV
 </br>
 </br>
 
@@ -14,14 +15,13 @@ Please flash your device with <a href=https://developer.nvidia.com/embedded/jetp
 </br>
 </br>
 
-# Environment
-## Install OpenCV 3.4.0
+# Install OpenCV 3.4.0
 ```C
 $ ./script/install_opencv3.4.0.sh [/path/to/install/folder]
 ```
 </br>
 
-## TensorFlow 1.6
+# TensorFlow 1.6
 
 **Install Prebuilt Wheel**
 ```C
@@ -161,34 +161,6 @@ Preconfigured Bazel build configs. You can use any of the below by adding "--con
 Configuration finished
 </br>
 </br>
-</br>
-
-# Run
-**Dependency**
-```C
-$ sudo apt-get install git protobuf-compiler python-pil python-lxml python-tk
-```
-
-**Object Detection API**
-
-```C
-$ git clone https://github.com/tensorflow/models.git
-$ cd models/research/
-$ protoc object_detection/protos/*.proto --python_out=.
-$ export PYTHONPATH=$PYTHONPATH:`pwd`:`pwd`/slim
-$ cd ../../
-```
-
-**Download SSD Model**
-```C
-$ wget http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2017_11_17.tar.gz
-$ tar -xvzf ssd_mobilenet_v1_coco_2017_11_17.tar.gz 
-```
-
-**Test Pipeline 1**
-```C
-$ python object_detection-1.py
-```
 </br>
 </br>
 </br>
