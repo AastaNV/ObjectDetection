@@ -1,10 +1,10 @@
 Object Detection Sample on Jetson
 ======================================
-Please get the requirements installed with the information shared in 'requirement'.
+Please get the requirements installed first.
 </br>
 </br>
 
-# Pipeline-1: TensorFlow Object Detection API
+## Pipeline-1: TensorFlow Object Detection API
 **Dependency**
 ```C
 $ sudo apt-get install git protobuf-compiler python-pil python-lxml python-tk
